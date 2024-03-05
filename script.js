@@ -7,7 +7,7 @@ const btnEditItem = document.querySelectorAll(".editItem");
 
 // Cleaning div
 const containerTasks = document.querySelector(".containerTasks");
-containerTasks.innerHTML = "";
+// containerTasks.innerHTML = "";
 
 // Event Handlers
 
@@ -16,7 +16,11 @@ btnAddItem.addEventListener("click", function (e) {
   e.preventDefault();
 
   if (inputTask.value) {
-    const html = `<li>${inputTask.value} <button class="deleteTask">Delete task</button> <button class="deleteTask">Delete task</button></li>`;
+    const html = `<div class="task">
+    <p>${input.value}</p>
+    <button class="editItem">Edit task</button>
+    <button class="deleteTask">Delete task</button>
+  </div>`;
 
     containerTasks.insertAdjacentHTML("afterbegin", html);
 
@@ -28,7 +32,7 @@ btnAddItem.addEventListener("click", function (e) {
     btnDeleteItem.forEach((btn) =>
       btn.addEventListener("click", function (e) {
         e.preventDefault();
-        e.target.closest("li").remove();
+        e.target.closest("div").remove();
       })
     );
   } else {

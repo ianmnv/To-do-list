@@ -10,30 +10,54 @@
 
   <body>
     <main>
-      <div class="title">
-        <h1>Your to-do list app</h1>
+      <div class="main-title">
+        <div class="h1-title-cont">
+          <h1>Your to-do list app</h1>
+          <img src="notes-drawing.svg" alt="note-img" class="note-img" />
+        </div>
+
         <form>
-          <label for="input">Write your tasks below &darr;</label>
+          <label for="input">
+            <p>Write your task below</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-title"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25"
+              />
+            </svg>
+          </label>
           <input type="text" class="input-task" id="input" />
           <button class="addItem">Add new task</button>
         </form>
       </div>
 
-      <div class="containerItems">
+      <section class="containerItems">
         <div class="title-cont">
           <h2>Tasks of the day:</h2>
           <button id="priority">Select priority</button>
         </div>
-        <ul class="containerTasks">
-          <li>
-            Take breakfast <button class="deleteTask">Delete task</button>
-          </li>
-          <li>
-            Meditate
+
+        <div class="containerTasks">
+          <div class="task">
+            <p>Take breakfast</p>
+            <button class="editItem">Edit task</button>
             <button class="deleteTask">Delete task</button>
-          </li>
-        </ul>
-      </div>
+          </div>
+          <div class="task">
+            <p>Meditate</p>
+            <button class="editItem">Edit task</button>
+            <button class="deleteTask">Delete task</button>
+          </div>
+        </div>
+      </section>
 
       <!-- <h2>EXAMPLE OF FORMS</h2>
       <form action="">
