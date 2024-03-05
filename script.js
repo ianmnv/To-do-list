@@ -5,8 +5,6 @@ const inputTask = document.querySelector(".input-task");
 const btnAddItem = document.querySelector(".addItem");
 const btnEditItem = document.querySelectorAll(".editItem");
 
-const listItem = document.querySelectorAll("li");
-
 // Cleaning div
 const containerTasks = document.querySelector(".containerTasks");
 containerTasks.innerHTML = "";
@@ -18,7 +16,7 @@ btnAddItem.addEventListener("click", function (e) {
   e.preventDefault();
 
   if (inputTask.value) {
-    const html = `<li>${inputTask.value} <button class="deleteTask">Delete task</button></li>`;
+    const html = `<li>${inputTask.value} <button class="deleteTask">Delete task</button> <button class="deleteTask">Delete task</button></li>`;
 
     containerTasks.insertAdjacentHTML("afterbegin", html);
 
