@@ -10,7 +10,7 @@
 
   <body>
     <main>
-      <div class="main-title">
+      <div class="title-container">
         <div class="h1-title-cont">
           <h1>Your to-do list app</h1>
           <img src="notes-drawing.svg" alt="note-img" class="note-img" />
@@ -34,27 +34,41 @@
               />
             </svg>
           </label>
-          <input type="text" class="input-task" id="input" />
-          <button class="addItem">Add new task</button>
+          <input type="text" id="input" />
+          <input type="submit" id="new-task-submit" value="Add task" />
         </form>
       </div>
 
-      <section class="containerItems">
-        <div class="title-cont">
-          <h2>Tasks of the day:</h2>
-          <button id="priority">Select priority</button>
-        </div>
+      <section class="containerTasks">
+        <h2>Tasks of the day:</h2>
 
-        <div class="containerTasks">
+        <div class="tasks">
           <div class="task">
-            <p>Take breakfast</p>
-            <button class="editItem">Edit task</button>
-            <button class="deleteTask">Delete task</button>
+            <div class="content">
+              <input type="text" class="text" value="A new task" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
           </div>
           <div class="task">
-            <p>Meditate</p>
-            <button class="editItem">Edit task</button>
-            <button class="deleteTask">Delete task</button>
+            <div class="content">
+              <input type="text" class="text" value="A new task" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div>
+          <div class="task">
+            <div class="content">
+              <input type="text" class="text" value="A new task" readonly />
+            </div>
+            <div class="actions">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
           </div>
         </div>
       </section>

@@ -6,9 +6,6 @@
 
 html {
   font-size: 62.5%;
-}
-
-body {
   font-family: sans-serif;
 }
 
@@ -24,12 +21,9 @@ main {
   background-color: #f5f5f5;
 }
 
-.main-title {
-  border: #000 solid 3px;
+.title-container {
   background-color: #5c7cfa;
   padding: 2rem;
-
-  align-self: center;
 
   display: flex;
   flex-direction: column;
@@ -38,16 +32,19 @@ main {
 
 .h1-title-cont {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   padding: 1rem;
+  min-width: 70rem;
 
-  border: #000 1px solid;
   background-color: #acbcff;
 }
 
 h1 {
   font-size: 4rem;
+  font-weight: 700;
   text-align: center;
+  border-bottom: 1px solid #000;
 }
 
 .note-img {
@@ -77,60 +74,77 @@ label {
 
 input {
   height: 3rem;
+  font-size: 2.3rem;
+  border: none;
+}
+
+#new-task-submit {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+#new-task-submit:hover {
+  background-color: #fff;
+}
+
+#input {
   border: 2px solid #e3fafc;
   grid-column: 1 / 2;
-  font-size: 2rem;
 }
 
-.containerItems {
-  background-color: #fffc57;
-  min-width: 100rem;
+.containerTasks {
+  min-width: 80rem;
   height: 100%;
-}
-
-.title-cont {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background-color: #f4c430;
-  border: #ff8c00 solid 3px;
 }
 
 h2 {
   font-size: 3rem;
   padding: 1rem;
+  background-color: #f4c430;
+  border: #ff8c00 solid 3px;
 }
 
-#priority {
-  margin: 1rem;
-}
-
-.containerTasks {
-  padding: 2rem 10rem;
-}
+/* .tasks {
+} */
 
 .task {
   display: flex;
-  align-items: flex-end;
-  gap: 1rem;
   padding-top: 1.5rem;
-  border-bottom: #000 solid 2px;
+  border-bottom: #000 solid 1px;
 }
 
-p {
-  font-size: 2.5rem;
-  margin-right: auto;
+.content {
+  flex-grow: 1;
+}
+
+.text {
+  background: none;
+  outline: none;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  gap: 2rem;
 }
 
 button {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-weight: 550;
   padding: 0.4rem;
   cursor: pointer;
-  background-color: #fff;
-  border: #000 solid 1px;
+  background: none;
+  border: none;
 }
 
 button:hover {
-  background-color: #fafafa;
+  opacity: 0.5;
+}
+
+.edit {
+  color: #4167ff;
+}
+
+.delete {
+  color: #d40000;
 }
