@@ -42,47 +42,45 @@ const callback = function (e) {
   inputTask.style.border = "2px solid #e3fafc";
 
   //////////////// Button delete item
-  const btnDeleteItem = document.querySelectorAll(".delete");
+  const btnDeleteItem = document.querySelector(".delete");
 
-  btnDeleteItem.forEach((btn) =>
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
-      e.target.closest(".task").remove();
-    })
-  );
+  btnDeleteItem.addEventListener("click", function (e) {
+    e.preventDefault();
+    e.target.closest(".task").remove();
+  });
 
   //////////////// Button edit item
-  const btnEditItem = document.querySelectorAll(".edit");
+  const btnEditItem = document.querySelector(".edit");
 
-  btnEditItem.forEach((btn, i) =>
-    btn.addEventListener("click", function (e) {
-      e.preventDefault();
+  btnEditItem.addEventListener("click", function (e) {
+    e.preventDefault();
 
-      const input = btn
-        .closest(".task")
-        .querySelector(".content")
-        .querySelector("input");
+    const input = e.target
+      .closest(".task")
+      .querySelector(".content")
+      .querySelector("input");
 
-      if (btn.innerHTML === "Edit") {
-        input.removeAttribute("readonly");
-        input.style.outline = "1px solid";
-        input.focus();
+    if (e.target.innerHTML === "Edit") {
+      input.removeAttribute("readonly");
+      input.style.outline = "1px solid";
+      input.focus();
 
-        btn.innerHTML = "Save";
-        btn.style.color = "#a629cc";
-      } else {
-        input.setAttribute("readonly", "readonly");
-        input.style.outline = "none";
+      e.target.innerHTML = "Save";
+      e.target.style.color = "#a629cc";
+    } else {
+      input.setAttribute("readonly", "readonly");
+      input.style.outline = "none";
 
-        btn.innerHTML = "Edit";
-        btn.style.color = "#4167ff";
-      }
-    })
-  );
+      e.target.innerHTML = "Edit";
+      e.target.style.color = "#4167ff";
+    }
+  });
 };
 
 //////////////// Button add items
 form.addEventListener("submit", callback);
+
+// // CopyRight
 
 const copyright = document.createElement("div");
 const text = document.createElement("p");
