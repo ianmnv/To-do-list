@@ -10,13 +10,13 @@
 
   <body>
     <main>
-      <div class="title-container">
+      <section class="title-container">
         <div class="h1-title-cont">
           <h1>Your to-do list app</h1>
           <img src="notes-drawing.svg" alt="note-img" class="note-img" />
         </div>
 
-        <form>
+        <form id="form">
           <label for="input">
             <p>Write your task below</p>
             <svg
@@ -37,39 +37,26 @@
           <input type="text" id="input" />
           <input type="submit" id="new-task-submit" value="Add task" />
         </form>
-      </div>
+      </section>
 
       <section class="containerTasks">
         <h2>Tasks of the day:</h2>
 
-        <div class="tasks">
-          <div class="task">
+        <div class="tasks" id="tasks-container">
+          <!-- <div class="task">
             <div class="content">
-              <input type="text" class="text" value="A new task" readonly />
+              <input
+                type="text"
+                class="text"
+                value="A new task"
+                readonly
+              />
             </div>
             <div class="actions">
               <button class="edit">Edit</button>
               <button class="delete">Delete</button>
             </div>
-          </div>
-          <div class="task">
-            <div class="content">
-              <input type="text" class="text" value="A new task" readonly />
-            </div>
-            <div class="actions">
-              <button class="edit">Edit</button>
-              <button class="delete">Delete</button>
-            </div>
-          </div>
-          <div class="task">
-            <div class="content">
-              <input type="text" class="text" value="A new task" readonly />
-            </div>
-            <div class="actions">
-              <button class="edit">Edit</button>
-              <button class="delete">Delete</button>
-            </div>
-          </div>
+          </div> -->
         </div>
       </section>
 
