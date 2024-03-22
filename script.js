@@ -26,7 +26,7 @@ const callback = function (e) {
         class="text"
         value="${value}"
         name="task-value"
-        readonly
+        readonly = 'readonly'
       />
     </div>
     <div class="actions">
@@ -83,3 +83,22 @@ const callback = function (e) {
 
 //////////////// Button add items
 form.addEventListener("submit", callback);
+
+const copyright = document.createElement("div");
+const text = document.createElement("p");
+text.innerHTML =
+  "To-do list app created by ian_mnv 😀, you can find me like that on instagram and github if you'd like to add me. <button class='got-you'>Gotcha</button>";
+text.style.fontSize = "2rem";
+
+copyright.append(text);
+document.querySelector("main").append(copyright);
+
+const copyBtn = document.querySelector(".got-you");
+
+copyBtn.style.border = "1px solid #000";
+copyBtn.style.padding = "1rem";
+copyBtn.style.marginLeft = "2rem";
+
+copyBtn.addEventListener("click", function () {
+  copyright.remove();
+});
